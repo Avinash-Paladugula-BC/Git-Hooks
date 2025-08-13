@@ -8,3 +8,6 @@ hi
 
 ## Commit on 2025-08-12 16:48:37 +0530
 - after adding file 3
+
+## Commit on 2025-08-12 16:58:27 +0530
+- after updating the README.md file

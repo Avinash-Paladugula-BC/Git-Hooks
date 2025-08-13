@@ -1,0 +1,17 @@
+$ cat post-commit
+#!/bin/bash
+
+# File where commit logs will be stored
+DOC_FILE="commit-log.md"
+
+# Get the latest commit message and timestamp
+COMMIT_MSG=$(git log -1 --pretty=format:"%s")
+COMMIT_DATE=$(git log -1 --pretty=format:"%cd" --date=iso)
+
+# Append to the documentation file
+{
+    echo ""
+    echo "## Commit on ${COMMIT_DATE}"
+    echo "- ${COMMIT_MSG}"
+} >> "$DOC_FILE"
+
